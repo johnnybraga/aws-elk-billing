@@ -26,9 +26,9 @@ Follow instructions at http://docs.aws.amazon.com/awsaccountbilling/latest/about
 ### Architecture
 There are Four Docker containers. 
 
-1. [Elasticsearch 2.3.3](https://hub.docker.com/r/priceboard/elasticsearch) (https://github.com/PriceBoardIn/elasticsearch/tree/2.3.3)
-2. [Kibana](https://hub.docker.com/r/priceboard/kibana) (https://github.com/PriceBoardIn/kibana)
-3. [Logstash](https://hub.docker.com/r/priceboard/logstash) (https://github.com/PriceBoardIn/logstash)
+1. [elasticsearch:5-alpine](https://hub.docker.com/_/elasticsearch/)
+2. [priceboard/docker-alpine:kibana](https://hub.docker.com/r/priceboard/docker-alpine/) (https://github.com/PriceBoardIn/docker-alpine/tree/master/alpine-kibana)
+3. [Logstash:5-alpine](https://hub.docker.com/r/_/logstash)
 4. aws-elk-billing (Refer: Dockerfile of this repository)
 
 Integration among the 4 containers is done with `docker-compose.yml`
