@@ -35,7 +35,7 @@ services:
     command: "logstash -f /logstash.conf"
 
   kibana:
-    image: kibana:5
+    image: priceboard/docker-alpine:kibana
     volumes:
     - ./kibana.yml:/opt/kibana/config/kibana.yml
     ports:
