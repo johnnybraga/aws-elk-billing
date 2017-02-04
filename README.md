@@ -1,10 +1,6 @@
 # aws-elk-billing [![Build Status](https://travis-ci.org/PriceBoardIn/aws-elk-billing.svg?branch=master)](https://travis-ci.org/PriceBoardIn/aws-elk-billing)
 
-<<<<<<< HEAD
 ![Alt text](https://github.com/PriceBoardIn/aws-elk-billing/blob/master/screenshots/kibana-dashboard.png "Overview")
-=======
-![Alt text](https://github.com/prasenforu/aws-elk-billing/blob/master/screenshots/kibana-dashboard.png "Overview")
->>>>>>> 24d6278... Fixed containers
 
 ## Overview
 
