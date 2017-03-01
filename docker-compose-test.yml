@@ -31,7 +31,7 @@ services:
     - elasticsearch:elasticsearch
     volumes:
     - ./logstash.conf:/logstash.conf
-    command: "logstash -f /logstash.conf"
+    command: "logstash -f /logstash.conf --debug --verbose"
 
   kibana:
     image: priceboard/docker-alpine:kibana
@@ -49,3 +49,5 @@ services:
     ports:
     - 9200:9200
     - 9300:9300
+    environment:
+      ES_JAVA_OPTS: "-Xms1g -Xmx1g"
