@@ -77,7 +77,7 @@ class Tools:
         return connection_ok
 
     def index_template(self):
-        out = subprocess.check_output(['curl -head "elasticsearch:9200/_template/aws_billing"'], shell=True, stderr=subprocess.PIPE)
+        out = subprocess.check_output(['curl --head "elasticsearch:9200/_template/aws_billing"'], shell=True, stderr=subprocess.PIPE)
         if '200 OK' not in out:
             status = subprocess.Popen(
                 ['curl -XPUT elasticsearch:9200/_template/aws_billing -d "`cat /aws-elk-billing/aws-billing-es-template.json`"'],
