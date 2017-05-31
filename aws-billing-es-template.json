@@ -9,17 +9,19 @@
        "dynamic_templates" : [ {
          "string_fields" : {
            "match" : "*",
-           "match_mapping_type" : "text",
+           "match_mapping_type" : "string",
            "mapping" : {
-             "type" : "text", "index" : "analyzed", "omit_norms" : true,
-               "fields" : {
-                 "raw" : {"type": "text", "index" : "not_analyzed", "ignore_above" : 256}
-               }
+             "type" : "text",
+	     "index" : true,
+	     "norms" : true,
+             "fields" : {
+                 "keyword" : {"type": "keyword"
+             }
            }
          }
        } ],
        "properties" : {
-         "@version": { "type": "text", "index": "not_analyzed" },
+         "@version": { "type": "keyword"},
 	 "lineItem/BlendedCost":{"type":"float"},
 	 "lineItem/UnblendedCost":{"type":"float"}
        }
