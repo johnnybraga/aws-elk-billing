@@ -33,8 +33,8 @@ if __name__ == '__main__':
     for dir_name in s3_dir_to_index:
         gzip_filenames = tools.get_latest_zip_filename(dir_name)
         # By Felipe Ribeiro, it is possivel to download many files resources for same reportKeys
-        for file in gzip_filenames:
-            csv_filename = tools.get_req_csv_from_s3(dir_name, file)
+        for file_reportKeys in gzip_filenames:
+            csv_filename = tools.get_req_csv_from_s3(dir_name, file_reportKeys)
             print(gzip_filename,csv_filename)
             tools.index_csv(csv_filename, dir_name)
 
