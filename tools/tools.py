@@ -155,7 +155,7 @@ class Tools:
         # read the json file to get the latest updated version of csv
         f = open('getfile.json', 'r')
         content = eval(f.read())
-        latest_gzip_filename = content['reportKeys']
+        latest_gzip_filename = content['reportKeys'][0]
         f.close()
         return latest_gzip_filename
 
