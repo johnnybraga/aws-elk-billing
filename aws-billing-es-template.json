@@ -1,7 +1,10 @@
   {
         "template": "aws-billing-*",
         "settings": {
-                "index.refresh_interval": "10s"
+                "index.refresh_interval": "10s",                                
+                "number_of_shards" : 3,
+                "number_of_replicas": 0
+          
         },
         "mappings": {
                 "_default_": {
